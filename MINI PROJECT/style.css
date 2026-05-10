@@ -1,0 +1,34 @@
+:root{
+ --bar-h: 42px;
+ --bar-gap: 8px;
+ --tick-size: 1px;
+ --tick-color: #cfd8dc;
+ --idle-color: repeating-linear-gradient(45deg,#eceff1 0 8px,#e0e0e0 8px 16px);
+ }
+ body{ background: #0f172a0d; }
+ .card{ border: none; box-shadow: 0 8px 24px rgba(2,6,23,.08); border-radius: 1rem; }
+ .badge-rounded{ border-radius: 999px; padding: .4rem .7rem; }
+ /* Gantt */
+ .gantt-wrapper{ position: relative; overflow-x: auto; padding-bottom: 18px; }
+ .gantt-track{ position: relative; min-height: var(--bar-h); display: flex; align-items:
+stretch; gap: var(--bar-gap); }
+ .gantt-bar{ height: var(--bar-h); min-width: 24px; display: flex; align-items: center;
+justify-content: center; color: #111; font-weight: 600; border-radius: .75rem; border: 2px
+solid rgba(0,0,0,.06); box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); }
+ .gantt-bar.current{ outline: 3px solid #111827; outline-offset: 2px; }
+ .gantt-bar.idle{ background: var(--idle-color); color: #555; }
+ .time-axis{ position: sticky; left: 0; bottom: 0; height: 18px; display: flex; alignitems: end; gap: var(--bar-gap); font-size: 12px; color: #334155; }
+ .tick{ position: relative; min-width: 24px; text-align: center; }
+ .tick::before{ content:""; position: absolute; top: -6px; left: 50%; width: var(--ticksize); height: 6px; background: var(--tick-color); transform: translateX(-50%); }
+ .ready-queue{ min-height: 48px; display: flex; gap: .5rem; flex-wrap: wrap; }
+ .rq-chip{ border-radius: 999px; padding: .35rem .65rem; border: 1px solid
+rgba(0,0,0,.06); font-weight: 600; }
+ .table thead th{ position: sticky; top: 0; background: #fff; }
+ .pill{ border-radius: 999px; padding: .35rem .65rem; font-weight: 700; border: 1px solid
+rgba(0,0,0,.06); }
+ /* .kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation
+Mono", "Courier New", monospace; background: #111827; color: #e5e7eb; padding: .1rem .45rem;
+border-radius: .5rem; font-size: .85rem; } */
+ .legend-box{ width: 18px; height: 18px; display: inline-block; border-radius: .4rem;
+border: 1px solid rgba(0,0,0,.08); vertical-align: middle; margin-right: .35rem; }
+ /* .footer-note{ font-size: .9re */
